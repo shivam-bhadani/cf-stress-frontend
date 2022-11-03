@@ -17,7 +17,7 @@ const Test = () => {
 		history.push('/login')
 	}
 
-	const TEST_URL = `https://cfstressbackend.herokuapp.com/api/test/${contestID}/${problemIndex}`
+	const TEST_URL = `http://localhost:8000/api/test/${contestID}/${problemIndex}`
 
 	const submit = async () => {
 		try {
@@ -27,7 +27,7 @@ const Test = () => {
 			setLoader(true)
 			const response = await axios.post(TEST_URL, {
 				submission_id: sumbmissionID,
-				cfhandle: user.cfhandle
+				cfhandle: user.cfhandle,
 			})
 			const ticketID = response.data
 			if (ticketID?.error) {

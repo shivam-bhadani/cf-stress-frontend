@@ -36,7 +36,7 @@ const Signup = () => {
     try {
       setLoader(true)
       delete data["cpassword"];
-      const SIGNUP_URL = "https://cfstressbackend.herokuapp.com/api/signup";
+      const SIGNUP_URL = "http://localhost:8000/api/signup";
       try {
         const successMessage = await axios.post(SIGNUP_URL, data, {
           withCredentials: true

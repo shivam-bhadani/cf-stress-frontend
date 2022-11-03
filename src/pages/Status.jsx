@@ -17,7 +17,7 @@ const Status = () => {
 	const [intervalID, setIntervalID] = useState(0);
 	const [errorMessage, setErrorMessage] = useState("");
 
-	const STATUS_URL = `https://cfstressbackend.herokuapp.com/api/status/${ticketID}`
+	const STATUS_URL = `http://localhost:8000/api/status/${ticketID}`
 
 	if (user?.name == null) {
 		history.push('/login')

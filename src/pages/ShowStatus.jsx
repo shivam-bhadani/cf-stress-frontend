@@ -11,7 +11,7 @@ const ShowStatus = () => {
 	const { user, setUser } = useContext(UserContext);
 	const [ticketID, setTicketID] = useState("");
 
-	const STATUS_URL = `https://cfstressbackend.herokuapp.com/api/status/${ticketID}`
+	const STATUS_URL = `http://localhost:8000/api/status/${ticketID}`
 
 	const submit = async () => {
 		try {

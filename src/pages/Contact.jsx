@@ -22,7 +22,7 @@ const Contact = () => {
 	});
 
 	const onSubmit = async (data) => {
-		let CONTACT_URL = `https://cfstressbackend.herokuapp.com/api/contact`;
+		let CONTACT_URL = `http://localhost:8000/api/contact`;
 		try {
 			setLoader(true)
 			const successMessage = await axios.post(CONTACT_URL, data)

@@ -24,7 +24,7 @@ const Login = () => {
 	});
 
 	const onSubmit = async (data) => {
-		const LOGIN_URL = `https://cfstressbackend.herokuapp.com/api/login`;
+		const LOGIN_URL = `http://localhost:8000/api/login`;
 		try {
 			setLoader(true);
 			const successMessage = await axios.post(LOGIN_URL, data, {
