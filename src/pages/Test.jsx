@@ -32,6 +32,7 @@ const Test = () => {
 			const ticketID = response.data
 			if (ticketID?.error) {
 				alert(ticketID.error);
+				setLoader(false)
 				return
 			}
 			history.push(`/status/${ticketID}`)
